@@ -70,7 +70,7 @@ public final class HallucinationManager {
 
                 HallucinationEntity ghost = new HallucinationEntity(ModContent.HALLUCINATION.get(), level);
                 ghost.moveTo(x + 0.5, y, z + 0.5, level.random.nextFloat() * 360.0F, 0.0F);
-                level.addEntity(nextId--, ghost);
+                level.putNonPlayerEntity(nextId--, ghost);
                 ACTIVE.add(ghost);
                 return;
             }
