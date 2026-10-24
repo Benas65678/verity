@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": { "layer0": "veritydark:item/containment_lantern" },
+  "overrides": [
+    { "predicate": { "veritydark:lit": 1 }, "model": "veritydark:item/containment_lantern_lit" }
+  ]
+}
