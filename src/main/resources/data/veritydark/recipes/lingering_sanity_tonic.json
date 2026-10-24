@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "veritydark:splash_sanity_tonic"
+    },
+    {
+      "item": "veritydark:distortion_shard"
+    },
+    {
+      "item": "minecraft:gunpowder"
+    }
+  ],
+  "result": {
+    "item": "veritydark:lingering_sanity_tonic",
+    "count": 1
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "display": {
+    "icon": {
+      "item": "veritydark:splash_sanity_tonic"
+    },
+    "title": {
+      "translate": "advancements.veritydark.splash_therapy.title"
+    },
+    "description": {
+      "translate": "advancements.veritydark.splash_therapy.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "c": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "veritydark:splash_sanity_tonic"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "parent": "veritydark:clear_mind"
+}

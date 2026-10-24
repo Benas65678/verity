@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:golden_apple"
+    },
+    "title": {
+      "translate": "advancements.veritydark.good_friends.title"
+    },
+    "description": {
+      "translate": "advancements.veritydark.good_friends.description"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "c": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "veritydark:first_gift"
+}

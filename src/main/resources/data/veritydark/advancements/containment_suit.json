@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "item": "veritydark:containment_chestplate"
+    },
+    "title": {
+      "translate": "advancements.veritydark.containment_suit.title"
+    },
+    "description": {
+      "translate": "advancements.veritydark.containment_suit.description"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "c": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "veritydark:root"
+}

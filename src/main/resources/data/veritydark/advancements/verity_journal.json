@@ -1,0 +1,32 @@
+{
+  "display": {
+    "icon": {
+      "item": "veritydark:verity_journal"
+    },
+    "title": {
+      "translate": "advancements.veritydark.verity_journal.title"
+    },
+    "description": {
+      "translate": "advancements.veritydark.verity_journal.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "c": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "veritydark:verity_journal"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "parent": "veritydark:root"
+}

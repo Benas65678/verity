@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "item": "veritydark:smile_charm"
+    },
+    "title": {
+      "translate": "advancements.veritydark.best_friends.title"
+    },
+    "description": {
+      "translate": "advancements.veritydark.best_friends.description"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "c": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "veritydark:good_friends"
+}

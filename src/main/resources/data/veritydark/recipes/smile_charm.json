@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " G ",
+    "GYG",
+    " D "
+  ],
+  "key": {
+    "G": {
+      "item": "minecraft:gold_ingot"
+    },
+    "Y": {
+      "item": "minecraft:yellow_dye"
+    },
+    "D": {
+      "item": "veritydark:distortion_shard"
+    }
+  },
+  "result": {
+    "item": "veritydark:smile_charm",
+    "count": 1
+  }
+}

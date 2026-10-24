@@ -1,0 +1,26 @@
+{
+  "display": {
+    "icon": {
+      "item": "veritydark:smile_lamp"
+    },
+    "title": {
+      "translate": "advancements.veritydark.safe_haven.title"
+    },
+    "description": {
+      "translate": "advancements.veritydark.safe_haven.description"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "c": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "block": "veritydark:smile_lamp"
+      }
+    }
+  },
+  "parent": "veritydark:root"
+}

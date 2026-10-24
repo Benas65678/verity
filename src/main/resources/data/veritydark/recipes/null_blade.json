@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "D",
+    "D",
+    "S"
+  ],
+  "key": {
+    "D": {
+      "item": "veritydark:distortion_shard"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "veritydark:null_blade",
+    "count": 1
+  }
+}

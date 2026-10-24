@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "GSG",
+    "SDS",
+    "GLG"
+  ],
+  "key": {
+    "G": {
+      "item": "minecraft:glass"
+    },
+    "S": {
+      "item": "minecraft:glowstone_dust"
+    },
+    "D": {
+      "item": "veritydark:distortion_shard"
+    },
+    "L": {
+      "item": "minecraft:lantern"
+    }
+  },
+  "result": {
+    "item": "veritydark:smile_lamp",
+    "count": 1
+  }
+}

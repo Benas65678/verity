@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "item": "veritydark:sanity_tonic"
+    },
+    "title": {
+      "translate": "advancements.veritydark.pulling_through.title"
+    },
+    "description": {
+      "translate": "advancements.veritydark.pulling_through.description"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "c": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "veritydark:broken_mind"
+}

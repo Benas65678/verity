@@ -1,0 +1,32 @@
+{
+  "display": {
+    "icon": {
+      "item": "veritydark:null_blade"
+    },
+    "title": {
+      "translate": "advancements.veritydark.forged_from_nothing.title"
+    },
+    "description": {
+      "translate": "advancements.veritydark.forged_from_nothing.description"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "c": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "veritydark:null_blade"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "parent": "veritydark:not_today"
+}

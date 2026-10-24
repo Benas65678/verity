@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "item": "veritydark:comfort_cookie"
+    },
+    "title": {
+      "translate": "advancements.veritydark.first_gift.title"
+    },
+    "description": {
+      "translate": "advancements.veritydark.first_gift.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "c": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "veritydark:root"
+}

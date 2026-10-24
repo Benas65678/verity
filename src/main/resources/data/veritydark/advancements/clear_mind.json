@@ -1,0 +1,30 @@
+{
+  "display": {
+    "icon": {
+      "item": "veritydark:sanity_tonic"
+    },
+    "title": {
+      "translate": "advancements.veritydark.clear_mind.title"
+    },
+    "description": {
+      "translate": "advancements.veritydark.clear_mind.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "c": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": [
+            "veritydark:sanity_tonic"
+          ]
+        }
+      }
+    }
+  },
+  "parent": "veritydark:root"
+}

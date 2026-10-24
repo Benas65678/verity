@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "I I",
+    "DID",
+    "IDI"
+  ],
+  "key": {
+    "D": {
+      "item": "veritydark:distortion_shard"
+    },
+    "I": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "result": {
+    "item": "veritydark:containment_chestplate",
+    "count": 1
+  }
+}

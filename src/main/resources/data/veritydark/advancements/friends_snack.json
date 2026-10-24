@@ -1,0 +1,30 @@
+{
+  "display": {
+    "icon": {
+      "item": "veritydark:comfort_cookie"
+    },
+    "title": {
+      "translate": "advancements.veritydark.friends_snack.title"
+    },
+    "description": {
+      "translate": "advancements.veritydark.friends_snack.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "c": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": [
+            "veritydark:comfort_cookie"
+          ]
+        }
+      }
+    }
+  },
+  "parent": "veritydark:root"
+}
