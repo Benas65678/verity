@@ -1,0 +1,185 @@
+{
+  "entity.anomaly.ambient": {
+    "subtitle": "subtitles.veritydark.anomaly.ambient",
+    "sounds": [
+      {
+        "name": "veritydark:mob/anomaly/ambient1",
+        "volume": 0.9,
+        "pitch": 1.0
+      },
+      {
+        "name": "veritydark:mob/anomaly/ambient2",
+        "volume": 0.9,
+        "pitch": 1.0
+      },
+      {
+        "name": "veritydark:mob/anomaly/ambient3",
+        "volume": 0.9,
+        "pitch": 1.0
+      },
+      {
+        "name": "veritydark:mob/anomaly/ambient4",
+        "volume": 0.9,
+        "pitch": 1.0
+      }
+    ]
+  },
+  "entity.anomaly.hurt": {
+    "subtitle": "subtitles.veritydark.anomaly.hurt",
+    "sounds": [
+      {
+        "name": "veritydark:mob/anomaly/hurt1",
+        "volume": 1.0,
+        "pitch": 1.0
+      },
+      {
+        "name": "veritydark:mob/anomaly/hurt2",
+        "volume": 1.0,
+        "pitch": 1.0
+      }
+    ]
+  },
+  "entity.anomaly.death": {
+    "subtitle": "subtitles.veritydark.anomaly.death",
+    "sounds": [
+      {
+        "name": "veritydark:mob/anomaly/death",
+        "volume": 1.0,
+        "pitch": 1.0
+      }
+    ]
+  },
+  "entity.anomaly.step": {
+    "subtitle": "subtitles.veritydark.anomaly.step",
+    "sounds": [
+      {
+        "name": "veritydark:mob/anomaly/step1",
+        "volume": 0.8,
+        "pitch": 1.0
+      },
+      {
+        "name": "veritydark:mob/anomaly/step2",
+        "volume": 0.8,
+        "pitch": 1.0
+      }
+    ]
+  },
+  "entity.anomaly.attack": {
+    "subtitle": "subtitles.veritydark.anomaly.attack",
+    "sounds": [
+      {
+        "name": "veritydark:mob/anomaly/attack1",
+        "volume": 1.0,
+        "pitch": 1.0
+      },
+      {
+        "name": "veritydark:mob/anomaly/attack2",
+        "volume": 1.0,
+        "pitch": 1.0
+      }
+    ]
+  },
+  "entity.anomaly.jumpscare": {
+    "subtitle": "subtitles.veritydark.anomaly.jumpscare",
+    "sounds": [
+      {
+        "name": "veritydark:mob/anomaly/reveal",
+        "volume": 1.0,
+        "pitch": 1.0
+      }
+    ]
+  },
+  "item.lantern.ignite": {
+    "subtitle": "subtitles.veritydark.lantern.ignite",
+    "sounds": [
+      {
+        "name": "veritydark:item/lantern_ignite",
+        "volume": 0.8,
+        "pitch": 1.0
+      }
+    ]
+  },
+  "item.lantern.extinguish": {
+    "subtitle": "subtitles.veritydark.lantern.extinguish",
+    "sounds": [
+      {
+        "name": "veritydark:item/lantern_extinguish",
+        "volume": 0.8,
+        "pitch": 1.0
+      }
+    ]
+  },
+  "item.tonic.shatter": {
+    "subtitle": "subtitles.veritydark.tonic.shatter",
+    "sounds": [
+      {
+        "name": "veritydark:item/tonic_shatter",
+        "volume": 1.0,
+        "pitch": 1.0
+      }
+    ]
+  },
+  "entity.verity.pleased": {
+    "subtitle": "subtitles.veritydark.verity.pleased",
+    "sounds": [
+      {
+        "name": "veritydark:item/verity_pleased",
+        "volume": 1.0,
+        "pitch": 1.0
+      }
+    ]
+  },
+  "block.smile_lamp.pulse": {
+    "subtitle": "subtitles.veritydark.smile_lamp.pulse",
+    "sounds": [
+      {
+        "name": "veritydark:item/lamp_pulse",
+        "volume": 0.8,
+        "pitch": 1.0
+      }
+    ]
+  },
+  "ambient.heartbeat": {
+    "sounds": [
+      {
+        "name": "veritydark:ambient/heartbeat",
+        "volume": 1.0
+      }
+    ]
+  },
+  "ambient.whisper": {
+    "subtitle": "subtitles.veritydark.whisper",
+    "sounds": [
+      {
+        "name": "veritydark:ambient/whisper1",
+        "volume": 1.0,
+        "pitch": 1.0
+      },
+      {
+        "name": "veritydark:ambient/whisper2",
+        "volume": 1.0,
+        "pitch": 1.0
+      }
+    ]
+  },
+  "ambient.anger_rise": {
+    "subtitle": "subtitles.veritydark.anger_rise",
+    "sounds": [
+      {
+        "name": "veritydark:ambient/anger_rise",
+        "volume": 1.0,
+        "pitch": 1.0
+      }
+    ]
+  },
+  "item.detector.beep": {
+    "subtitle": "subtitles.veritydark.detector.beep",
+    "sounds": [
+      {
+        "name": "veritydark:item/detector_beep",
+        "volume": 0.8,
+        "pitch": 1.0
+      }
+    ]
+  }
+}

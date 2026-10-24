@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "veritydark:block/smile_lamp_plain",
+    "down": "veritydark:block/smile_lamp_plain",
+    "up": "veritydark:block/smile_lamp_plain",
+    "north": "veritydark:block/smile_lamp_face",
+    "south": "veritydark:block/smile_lamp_face",
+    "east": "veritydark:block/smile_lamp_face",
+    "west": "veritydark:block/smile_lamp_face"
+  }
+}
