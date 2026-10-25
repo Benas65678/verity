@@ -2,7 +2,6 @@ package dev.veritydark;
 
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraftforge.registries.ForgeRegistries;
 
@@ -19,7 +18,9 @@ public final class VerityUtil {
      * Use /veritydark nearby in game to see what is around you and what the addon thinks of it.
      */
     public static boolean isVerity(Entity entity) {
-        if (!(entity instanceof LivingEntity) || entity instanceof Player) return false;
+        if (entity instanceof Player || entity instanceof net.minecraft.world.entity.item.ItemEntity
+                || entity instanceof net.minecraft.world.entity.ExperienceOrb
+                || entity instanceof net.minecraft.world.entity.projectile.Projectile) return false;
         ResourceLocation key = ForgeRegistries.ENTITY_TYPES.getKey(entity.getType());
         if (key == null || key.getNamespace().equals(VerityDark.MODID)) return false;
 
@@ -36,12 +37,11 @@ public final class VerityUtil {
     }
 
     /** Closest Verity to the given entity within the radius, or null. */
-    public static LivingEntity nearestVerity(Entity around, double radius) {
+    public static Entity nearestVerity(Entity around, double radius) {
         List<Entity> found = around.level().getEntities(around, around.getBoundingBox().inflate(radius), VerityUtil::isVerity);
         return found.stream()
                 .min(Comparator.comparingDouble(e -> e.distanceToSqr(around)))
-                .map(e -> (LivingEntity) e)
-                .orElse(null);
+                                .orElse(null);
     }
 
     private VerityUtil() {}

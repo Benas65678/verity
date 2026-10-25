@@ -126,14 +126,14 @@ public final class AngerManager {
             List<Entity> found = level.getEntities(player, player.getBoundingBox().inflate(48.0), VerityUtil::isVerity);
             for (Entity verity : found) {
                 if (!done.add(verity)) continue;
-                tickAnger(level, (LivingEntity) verity, player);
-                TrustManager.tick(level, (LivingEntity) verity, player);
+                tickAnger(level, verity, player);
+                TrustManager.tick(level, verity, player);
                 trySummon(level, verity, player);
             }
         }
     }
 
-    private static void tickAnger(ServerLevel level, LivingEntity verity, ServerPlayer player) {
+    private static void tickAnger(ServerLevel level, Entity verity, ServerPlayer player) {
         float sanityPct = SanityManager.get(player) / SanityManager.max();
         long time = level.getDayTime();
         long timeOfDay = time % 24000L;
@@ -180,7 +180,8 @@ public final class AngerManager {
     // ------------------------------------------------------------------ stats
 
     /** Applies the anger-scaled bonuses to Verity. Safe on any entity: missing attributes are skipped. */
-    public static void applyStats(LivingEntity verity, float anger) {
+    public static void applyStats(Entity entity, float anger) {
+        if (!(entity instanceof LivingEntity verity)) return;
         double f = VerityConfig.STATS_ENABLED.get() ? Mth.clamp(anger / 100.0F, 0.0F, 1.0F) : 0.0;
         setMod(verity, Attributes.MOVEMENT_SPEED, SPEED_ID, "veritydark.anger_speed",
                 VerityConfig.STAT_SPEED.get() * f, AttributeModifier.Operation.MULTIPLY_BASE);

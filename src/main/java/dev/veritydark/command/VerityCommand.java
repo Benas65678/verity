@@ -119,17 +119,17 @@ public final class VerityCommand {
         return found.stream().min(Comparator.comparingDouble(e -> e.distanceToSqr(player))).orElse(null);
     }
 
-    /** Shows every living entity within 24 blocks: its registry id, name and whether the addon treats it as Verity. */
+    /** Shows every entity within 24 blocks: its registry id, name and whether the addon treats it as Verity. */
     private static int nearby(CommandSourceStack src) throws com.mojang.brigadier.exceptions.CommandSyntaxException {
         ServerPlayer player = src.getPlayerOrException();
-        List<Entity> found = player.level().getEntities(player, player.getBoundingBox().inflate(24.0), e -> e instanceof net.minecraft.world.entity.LivingEntity);
+        List<Entity> found = player.level().getEntities(player, player.getBoundingBox().inflate(24.0), e -> true);
         if (found.isEmpty()) {
-            src.sendSuccess(() -> Component.literal("No living entities within 24 blocks."), false);
+            src.sendSuccess(() -> Component.literal("No entities within 24 blocks."), false);
             return 1;
         }
         for (Entity e : found) {
             ResourceLocation key = ForgeRegistries.ENTITY_TYPES.getKey(e.getType());
-            String line = (key == null ? "?" : key.toString()) + "  \"" + e.getName().getString() + "\"  -> "
+            String line = (key == null ? "?" : key.toString()) + "  [" + e.getClass().getSimpleName() + "]  \"" + e.getName().getString() + "\"  -> "
                     + (VerityUtil.isVerity(e) ? "VERITY" : "not Verity");
             src.sendSuccess(() -> Component.literal(line), false);
         }

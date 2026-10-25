@@ -4,7 +4,6 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
@@ -22,7 +21,8 @@ public final class VerityInteractions {
         if (!VerityConfig.on()) return;
         ItemStack stack = event.getItemStack();
         Entity target = event.getTarget();
-        if (!VerityUtil.isVerity(target) || !(target instanceof LivingEntity verity)) return;
+        if (!VerityUtil.isVerity(target)) return;
+        Entity verity = target;
         TrustManager.Gift gift = TrustManager.giftFor(stack);
         if (gift == null) return;
 
@@ -37,6 +37,24 @@ public final class VerityInteractions {
         }
         if (gift.trust() > 0.0F && target instanceof Mob mob) mob.setTarget(null);
         if (!player.getAbilities().instabuild) stack.shrink(1);
+    }
+
+    @SubscribeEvent(priority = EventPriority.HIGHEST)
+    public static void giftSpecific(PlayerInteractEvent.EntityInteractSpecific event) {
+        if (!VerityConfig.on()) return;
+        if (!VerityUtil.isVerity(event.getTarget()) || TrustManager.giftFor(event.getItemStack()) == null) return;
+        // Stop Verity's own "pick up" handling; the EntityInteract event does the actual gift.
+        event.setCancellationResult(InteractionResult.sidedSuccess(event.getLevel().isClientSide()));
+        event.setCanceled(true);
+        if (!event.getLevel().isClientSide()) {
+            Entity t = event.getTarget();
+            ItemStack stack = event.getItemStack();
+            Player player = event.getEntity();
+            TrustManager.Gift gift = TrustManager.giftFor(stack);
+            if (player instanceof ServerPlayer sp) TrustManager.applyGift((ServerLevel) event.getLevel(), sp, t, stack, gift);
+            if (gift.trust() > 0.0F && t instanceof Mob mob) mob.setTarget(null);
+            if (!player.getAbilities().instabuild) stack.shrink(1);
+        }
     }
 
     private VerityInteractions() {}

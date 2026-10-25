@@ -108,7 +108,7 @@ public final class TrustManager {
     }
 
     /** Applies a gift. Returns true if it was accepted (the item is consumed). */
-    public static void applyGift(ServerLevel level, ServerPlayer player, LivingEntity verity, ItemStack stack, Gift gift) {
+    public static void applyGift(ServerLevel level, ServerPlayer player, Entity verity, ItemStack stack, Gift gift) {
         boolean trustOn = VerityConfig.TRUST_ENABLED.get();
         ResourceLocation id = ForgeRegistries.ITEMS.getKey(stack.getItem());
         String itemKey = id == null ? "unknown" : id.toString();
@@ -143,7 +143,7 @@ public final class TrustManager {
     }
 
     /** Called once a second for each Verity that has a player nearby. */
-    public static void tick(ServerLevel level, LivingEntity verity, ServerPlayer player) {
+    public static void tick(ServerLevel level, Entity verity, ServerPlayer player) {
         if (!VerityConfig.TRUST_ENABLED.get()) return;
         float trust = get(verity);
         float anger = AngerManager.getAnger(verity);
@@ -187,7 +187,7 @@ public final class TrustManager {
         }
     }
 
-    private static void giveBack(ServerLevel level, LivingEntity verity, ServerPlayer player, float trust) {
+    private static void giveBack(ServerLevel level, Entity verity, ServerPlayer player, float trust) {
         ItemStack present;
         int roll = level.random.nextInt(100);
         if (trust >= Level.BONDED.min && roll < 12) present = new ItemStack(ModContent.SMILE_CHARM.get());

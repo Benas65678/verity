@@ -45,7 +45,7 @@ public class VerityMonitorItem extends Item {
                     Math.round(sanity), Math.round(max),
                     tier.display()));
 
-            LivingEntity verity = VerityUtil.nearestVerity(sp, 64.0);
+            net.minecraft.world.entity.Entity verity = VerityUtil.nearestVerity(sp, 64.0);
             if (verity == null) {
                 sp.sendSystemMessage(Component.translatable("veritydark.monitor.no_verity").withStyle(ChatFormatting.GRAY));
             } else {
