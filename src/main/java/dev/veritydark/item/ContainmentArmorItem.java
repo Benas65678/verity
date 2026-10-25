@@ -4,7 +4,6 @@ import dev.veritydark.VerityConfig;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.client.model.HumanoidModel;
-import net.minecraft.client.model.Model;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
@@ -45,7 +44,7 @@ public class ContainmentArmorItem extends ArmorItem {
 
             @Override
             @SuppressWarnings("unchecked")
-            public Model getHumanoidArmorModel(LivingEntity entity, ItemStack stack, EquipmentSlot slot, HumanoidModel<?> original) {
+            public HumanoidModel<?> getHumanoidArmorModel(LivingEntity entity, ItemStack stack, EquipmentSlot slot, HumanoidModel<?> original) {
                 if (model == null) {
                     model = new dev.veritydark.client.ContainmentArmorModel(
                             net.minecraft.client.Minecraft.getInstance().getEntityModels()
