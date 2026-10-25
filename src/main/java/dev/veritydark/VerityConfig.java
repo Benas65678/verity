@@ -41,6 +41,7 @@ public final class VerityConfig {
     // --- Verity detection ---
     public static final ForgeConfigSpec.ConfigValue<String> VERITY_NAMESPACE;
     public static final ForgeConfigSpec.ConfigValue<List<? extends String>> VERITY_ENTITY_IDS;
+    public static final ForgeConfigSpec.BooleanValue DETECT_LOOSELY;
 
     // --- Sanity ---
     public static final ForgeConfigSpec.DoubleValue MAX_SANITY;
@@ -166,6 +167,9 @@ public final class VerityConfig {
         VERITY_ENTITY_IDS = b.comment("Optional: restrict to specific entity ids, e.g. [\"verity:verity\"]. Leave empty to match the whole namespace.",
                         "Use /veritydark list in game to see the real ids.")
                 .defineList("entityIds", List.of(), o -> o instanceof String);
+        DETECT_LOOSELY = b.comment("If true, a living entity also counts as Verity when its registry id or display name contains 'verity'.",
+                        "Keeps the addon working when the Verity mod registers its entity under a different namespace.")
+                .define("detectLoosely", true);
         b.pop();
 
         b.push("sanity");
