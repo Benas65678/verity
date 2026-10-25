@@ -1,6 +1,266 @@
 {
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "veritydark:item/containment_boots"
+ "parent": "minecraft:block/block",
+ "textures": {
+  "0": "veritydark:item/containment_armor_sheet",
+  "particle": "veritydark:item/containment_armor_sheet"
+ },
+ "elements": [
+  {
+   "from": [
+    3.36,
+    2.75,
+    5.25
+   ],
+   "to": [
+    8.86,
+    13.25,
+    10.75
+   ],
+   "faces": {
+    "north": {
+     "uv": [
+      1.0,
+      2.5,
+      0.5,
+      3.625
+     ],
+     "texture": "#0"
+    },
+    "east": {
+     "uv": [
+      1.5,
+      2.5,
+      1.0,
+      3.625
+     ],
+     "texture": "#0"
+    },
+    "south": {
+     "uv": [
+      2.0,
+      2.5,
+      1.5,
+      3.625
+     ],
+     "texture": "#0"
+    },
+    "west": {
+     "uv": [
+      0.5,
+      2.5,
+      0.0,
+      3.625
+     ],
+     "texture": "#0"
+    },
+    "up": {
+     "uv": [
+      0.5,
+      2.5,
+      1.0,
+      2.0
+     ],
+     "texture": "#0"
+    },
+    "down": {
+     "uv": [
+      1.0,
+      2.0,
+      1.5,
+      2.5
+     ],
+     "texture": "#0"
+    }
+   }
+  },
+  {
+   "from": [
+    7.18,
+    2.77,
+    5.27
+   ],
+   "to": [
+    12.64,
+    13.23,
+    10.73
+   ],
+   "faces": {
+    "north": {
+     "uv": [
+      0.5,
+      2.5,
+      1.0,
+      3.625
+     ],
+     "texture": "#0"
+    },
+    "east": {
+     "uv": [
+      0.0,
+      2.5,
+      0.5,
+      3.625
+     ],
+     "texture": "#0"
+    },
+    "south": {
+     "uv": [
+      1.5,
+      2.5,
+      2.0,
+      3.625
+     ],
+     "texture": "#0"
+    },
+    "west": {
+     "uv": [
+      1.0,
+      2.5,
+      1.5,
+      3.625
+     ],
+     "texture": "#0"
+    },
+    "up": {
+     "uv": [
+      1.0,
+      2.5,
+      0.5,
+      2.0
+     ],
+     "texture": "#0"
+    },
+    "down": {
+     "uv": [
+      1.5,
+      2.0,
+      1.0,
+      2.5
+     ],
+     "texture": "#0"
+    }
+   }
   }
+ ],
+ "display": {
+  "gui": {
+   "rotation": [
+    30,
+    225,
+    0
+   ],
+   "translation": [
+    -0.01,
+    -0.01,
+    0
+   ],
+   "scale": [
+    1.014,
+    1.014,
+    1.014
+   ]
+  },
+  "ground": {
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "translation": [
+    0,
+    3,
+    0
+   ],
+   "scale": [
+    0.5,
+    0.5,
+    0.5
+   ]
+  },
+  "fixed": {
+   "rotation": [
+    0,
+    180,
+    0
+   ],
+   "translation": [
+    0,
+    0,
+    0
+   ],
+   "scale": [
+    0.6,
+    0.6,
+    0.6
+   ]
+  },
+  "thirdperson_righthand": {
+   "rotation": [
+    75,
+    45,
+    0
+   ],
+   "translation": [
+    0,
+    2.5,
+    0
+   ],
+   "scale": [
+    0.4,
+    0.4,
+    0.4
+   ]
+  },
+  "thirdperson_lefthand": {
+   "rotation": [
+    75,
+    45,
+    0
+   ],
+   "translation": [
+    0,
+    2.5,
+    0
+   ],
+   "scale": [
+    0.4,
+    0.4,
+    0.4
+   ]
+  },
+  "firstperson_righthand": {
+   "rotation": [
+    0,
+    45,
+    0
+   ],
+   "translation": [
+    0,
+    0,
+    0
+   ],
+   "scale": [
+    0.4,
+    0.4,
+    0.4
+   ]
+  },
+  "firstperson_lefthand": {
+   "rotation": [
+    0,
+    225,
+    0
+   ],
+   "translation": [
+    0,
+    0,
+    0
+   ],
+   "scale": [
+    0.4,
+    0.4,
+    0.4
+   ]
+  }
+ }
 }
