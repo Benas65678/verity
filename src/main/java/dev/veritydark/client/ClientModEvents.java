@@ -28,6 +28,11 @@ public final class ClientModEvents {
     }
 
     @SubscribeEvent
+    public static void layers(EntityRenderersEvent.RegisterLayerDefinitions event) {
+        event.registerLayerDefinition(ContainmentArmorModel.LAYER, ContainmentArmorModel::createLayer);
+    }
+
+    @SubscribeEvent
     public static void renderers(EntityRenderersEvent.RegisterRenderers event) {
         event.registerEntityRenderer(ModContent.ANOMALY.get(), SpookRenderer::anomaly);
         event.registerEntityRenderer(ModContent.STALKER.get(), SpookRenderer::stalker);

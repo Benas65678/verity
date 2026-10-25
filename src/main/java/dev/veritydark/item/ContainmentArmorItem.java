@@ -3,7 +3,13 @@ package dev.veritydark.item;
 import dev.veritydark.VerityConfig;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
+import net.minecraft.client.model.HumanoidModel;
+import net.minecraft.client.model.Model;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraftforge.client.extensions.common.IClientItemExtensions;
+import java.util.function.Consumer;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
@@ -25,6 +31,31 @@ public class ContainmentArmorItem extends ArmorItem {
             if (stack.getItem() instanceof ContainmentArmorItem) n++;
         }
         return n;
+    }
+
+    @Override
+    public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
+        return "veritydark:textures/models/armor/containment_armor.png";
+    }
+
+    @Override
+    public void initializeClient(Consumer<IClientItemExtensions> consumer) {
+        consumer.accept(new IClientItemExtensions() {
+            private dev.veritydark.client.ContainmentArmorModel model;
+
+            @Override
+            @SuppressWarnings("unchecked")
+            public Model getHumanoidArmorModel(LivingEntity entity, ItemStack stack, EquipmentSlot slot, HumanoidModel<?> original) {
+                if (model == null) {
+                    model = new dev.veritydark.client.ContainmentArmorModel(
+                            net.minecraft.client.Minecraft.getInstance().getEntityModels()
+                                    .bakeLayer(dev.veritydark.client.ContainmentArmorModel.LAYER));
+                }
+                ((HumanoidModel<LivingEntity>) original).copyPropertiesTo(model);
+                model.setSlot(slot);
+                return model;
+            }
+        });
     }
 
     @Override
